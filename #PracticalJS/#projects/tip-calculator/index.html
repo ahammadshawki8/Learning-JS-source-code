@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form class="calc">
+            <section class="set">
+                <h3 class="label" id="billLabel">Bill</h3>
+                <input type="number" id="billValue" value="100">
+            </section>
+
+            <section class="set">
+                <h3 class="label" id="tipLabel">Tip %</h3>
+                <input type="number" id="tipValue" value="15">
+            </section>
+
+            <section class="set">
+                <h3 class="label" id="personLabel">Person</h3>
+                <input type="number" id="personValue" value="1">
+            </section>
+        </form>
+
+        <div class="ans">
+            <section class="part">
+                <p class="title">Tip</p>
+                <h1 class="main" id="ansTip">BDT 00.00</h1>
+                <p class="title">Per Person</p>
+            </section>
+
+            <section class="part">
+                <p class="title">Total</p>
+                <h1 class="main" id="ansTotal">BDT 00.00</h1>
+                <p class="title">Per Person</p>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Currency</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector("form").onsubmit = function () {
+                    fetch("http://api.exchangeratesapi.io/v1/latest?access_key=ccb3d51c392042f452a840426f059f18&symbols=USD,AUD,CAD,PLN,MXN&format=1")
+                    .then(response => response.json())
+                    .then(data => {
+                        const currency = document.querySelector("#currency").value.toUpperCase();
+                        const rate = data.rates[currency];
+
+                        if (rate !== undefined) {
+                            document.querySelector("#result").innerHTML = `1 EUR is equal to ${rate} ${currency}`;
+                        }
+
+                        else {
+                            document.querySelector("#result").innerHTML = "Invalid Currency.";
+                        }
+                    })
+                    .catch(error => {
+                        console.log("Error: ", error);
+                    });
+                    return false;
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <form id="myForm">
+            <input type="text" id="currency" placeholder="Currency" />
+            <input type="submit" value="Submit" />
+        </form>
+        <div id="result"></div>
+    </body>
+</html>

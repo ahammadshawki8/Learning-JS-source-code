@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Events - JavaScript DOM Manipulation</title>
+    <link rel="stylesheet" href="style1.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="boxes">
+        <div id="box1" class="box" data-atr="box1" data-extra="attrToRemove">
+          <h4>Box 1</h4>
+          <button id="btn-click-me" type="button" name="click">Click Me</button>
+        </div>
+        <div id="box2" class="box" data-atr="box2">
+          <h4>Box 2</h4>
+          <div class="images">
+            <img src="https://via.placeholder.com/150x150" alt="valid-img">
+            <img src="https://audkjskjghkfgdbgfbgjdfg.fhgfkdbgjdb/fbdsfjhbf.png" alt="invalid-img">
+          </div>
+        </div>
+        <div id="box3" class="box" data-atr="box3">
+          <h4 onclick="showAlert()" >Box 3</h4>
+          Lorem ipsum <strong>dolor sit</strong>
+          <p class="box3-paragraph">amet, <em>consectetur</em> adipisicing elit, <strong>sed do eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+        <div id="box4" class="box" data-atr="box4">
+          <h4>Box 4</h4>
+          <ul>
+            <li onclick="alert('Hello World')">About this document</li>
+            <li id="link"><a href="https://with.zonayed.me">JavaScript DOM Manipulation</a></li>
+            <li><a href="https://with.zonayed.me">Learn With Zonayed</a></li>
+          </ul>
+        </div>
+        <div id="box5" class="box">
+          <h4>Input</h4>
+          <form>
+            <input onkeypress="alert()" type="text" name="name" placeholder="Your Name">
+            <input type="text" name="email" placeholder="Your Email">
+            <button type="submit" name="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="02 event handling.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6em;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    margin: 200px auto;
+    padding: 10px 30px;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+    border: 3px solid #ccc;
+    border-radius: 5%;
+}
+
+.set {
+    margin: 10px auto;
+}
+
+.part {
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+.label {
+    font-size: 17px;
+}
+
+.title {
+    font-size: 14px;
+}
